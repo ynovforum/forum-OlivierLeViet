@@ -1,10 +1,15 @@
-link(rel="stylesheet", href="/css/questions.css")
+link(rel="stylesheet", href="/css/admin/questionsAdmin.css")
 
-div(class="aa")
+div(class="questionsAdmin")
     for question in questionID
-        p #{question.title}
-        p #{question.description}
-        p #{question.userId}
+        div(class="questionD")
+            p #{question.title}
+            p #{question.description}
+            p #{question.userId}
+
+
+
+
     // for questionz in questionNoID
     //     p #{questionz.userId}
     //

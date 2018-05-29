@@ -6,17 +6,14 @@ html
 
 
     body
-        div(class="gg")
-            p tetxfgdzf
-                if user
-                    p #{user.name}
-                    p #{user.id}
-                    a(href="logout") logout
-                    if user.role === 'Admin'
-                        include admin/newQuestion
-                    if user.role === 'User'
-                        include user/userQuestion
+        div(class="info")
+            if user
+                p #{user.name}
+                p #{user.id}
+                include admin/newQuestion
 
 
-        div(class="hh")
+
+        div(class="container")
             include admin/questionsAdmin
+        div(class="profile")

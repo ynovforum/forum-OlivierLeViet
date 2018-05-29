@@ -1,0 +1,21 @@
+html
+    header
+        title OliFlow
+        include includes/navbar
+            link(rel="stylesheet", href="/css/main.css")
+
+
+    body
+        div(class="info")
+            p Bienvenue
+                if user
+                    p #{user.name}
+                    p #{user.id}
+                    a(href="logout") logout
+                    if user.role === 'Admin'
+                        include admin/newQuestion
+                    if user.role === 'User'
+                        include user/userQuestion
+        div(class="container")
+            include includes/questions
+        div(class="profile")

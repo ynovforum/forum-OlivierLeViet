@@ -1,0 +1,8 @@
+link(rel="stylesheet", href="/css/newQuestion.css")
+
+div(class="quesForm")
+    form(method="post", action="/admin/api/qpost")
+        ul
+            li: input(type="text", name="title", placeholder="Titre")
+            li: input(type="text", name="description", placeholder="Description")
+            li: button(type="submit") write

@@ -1,0 +1,36 @@
+.questionForm {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+}
+
+/*L'article*/
+.question {
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-bottom: 15px;
+    width: 260mm;
+    height: 150px;
+}
+
+/* LES ELEMENTS DE LARTICLE*/
+#title {
+    font-size: 20px;
+    color: black;
+}
+
+#desc {
+    font-size: 10px;
+    color: black;
+}
+
+#poster {
+    font-size: 10px;
+    color: blue;
+}
+
+#userId {
+
+}

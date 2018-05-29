@@ -2,6 +2,12 @@ const router = require('express').Router();
 const Sequelize = require('sequelize');
 const {User, Comment, Question} = require('../models');
 
+
+
+
+
+
+
 //#############CREATION QUESTION#######
 router.post('/api/qpost', (req, res) => {
     const title = req.body.title;

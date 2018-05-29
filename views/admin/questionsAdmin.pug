@@ -3,9 +3,23 @@ link(rel="stylesheet", href="/css/admin/questionsAdmin.css")
 div(class="questionsAdmin")
     for question in questionID
         div(class="questionD")
-            p #{question.title}
-            p #{question.description}
-            p #{question.userId}
+            form(method="post", action="/admin/api/edit")
+                ul
+                    li: input(name="title", value=question.title, style="display: none;")
+                    li: p #{question.title}
+                    li: input(name="description", value=question.description, style="display: none;")
+                    li: p #{question.description}
+                    li: input(name="userId", value=question.userId, style="display: none;")
+                    li: p #{question.userId}
+                    li: input(name="poster", value=question.poster, style="display: none;")
+                    li: p #{question.poster}
+                    li: button(type="submit") edit
+            //p #{question.title}
+            //p #{question.description}
+            //p #{question.userId}
+            //
+            //    ul: li: input(name="title", style="display: none;")
+            //        li: button(type="submit") edit
 
 
 

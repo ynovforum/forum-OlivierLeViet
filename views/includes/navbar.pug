@@ -1,0 +1,9 @@
+link(rel="stylesheet", href="/css/navbar.css")
+
+div(class="nav")
+    ul(class="navUl")
+        li: a(href="/") Home
+        li: a(href="login") Login
+        if user
+            li: a(href="logout") Logout
+    h1 Overview

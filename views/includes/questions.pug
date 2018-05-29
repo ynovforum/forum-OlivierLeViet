@@ -1,0 +1,10 @@
+link(rel="stylesheet", href="/css/questions.css")
+
+div(class="questionForm")
+    for question in questions
+        div(class="question")
+            p(id="title") #{question.title}
+            p(id="desc") #{question.description}
+            p(id="userId)") #{question.userId}
+            p(id="poster") Poster par #{question.poster}
+

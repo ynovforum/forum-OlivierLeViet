@@ -2,13 +2,16 @@ html
     header
         title OliFlo | #{user.name}
         link(rel="stylesheet", href="/css/admin/questionEdit.css")
+        script(src='/js/tacos.js')
 
     body
-        div(class="ques")
+        div(class="ques", id="norm")
             p #{user.name}
                 p #{title}
                 p #{desc}
                 p #{userId}
                 p(id="aaa") poster par #{poster}
-                button(onclick="getElementById('aaa').innerHTML = Date()") Edit
+                button(onclick="edit()") Edit
 
+        div(id="ee")
+            p grezef

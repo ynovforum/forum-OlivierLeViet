@@ -1,4 +1,9 @@
-.ques {
+.questionE {
+    position: absolute;
+    left: 30%;
+}
+
+.questionUpdate {
     position: absolute;
     left: 30%;
 }

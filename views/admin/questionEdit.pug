@@ -5,13 +5,19 @@ html
         script(src='/js/tacos.js')
 
     body
-        div(class="ques", id="norm")
-            p #{user.name}
-                p #{title}
-                p #{desc}
-                p #{userId}
-                p(id="aaa") poster par #{poster}
+        div(class="questionE", id="questionE")
+            p Question posée par #{user.name}
+                p #{question.title}
+                p #{question.description}
+                p #{question.userId}
+                p Poster par #{question.poster}
+                p ID= #{question.id}
                 button(onclick="edit()") Edit
 
-        div(id="ee")
-            p grezef
+        div(class="questionUpdate", id="questionUpdate", style="display: none;")
+            form(method="post", action="/admin/api/update") Updater votre Article #{user.name}
+                ul
+                    li: input(type="text", name="title", placeholder=question.title)
+                    li: input(type="text", name="description", placeholder=question.description)
+                    li: button(type="submit") Updater l'article
+            button(onclick="edit()") Back

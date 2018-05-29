@@ -13,6 +13,8 @@ div(class="questionsAdmin")
                     li: p #{question.userId}
                     li: input(name="poster", value=question.poster, style="display: none;")
                     li: p #{question.poster}
+                    li: input(name="id", value=question.id, style="display: none;")
+                    li: p #{question.id}
                     li: button(type="submit") edit
             //p #{question.title}
             //p #{question.description}

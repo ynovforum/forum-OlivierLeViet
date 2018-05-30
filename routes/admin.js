@@ -41,31 +41,29 @@ router.post('/api/edit', (req, res) => {
     const poster = req.body.poster;
     const id = req.body.id;
 
-    Question
-        .sync().then(() => {
+    Question.sync().then(() => {
         Question
             .findOne({where: {id: id}})
             .then((question) => {
                 res.render('admin/questionEdit', {user, question});
             })
-
-
     })
-
-
 });
-
+//
 // //############QUESTION UPDATE##############
 // router.post('/api/update', (req, res) => {
 //     const user = req.user;
+//     const question = req.question;
 //     const title = req.body.title;
 //     const desc = req.body.description;
-//     const userId = req.body.userId;
-//     const poster = req.body.poster;
+//     const id = req.body.id;
+//     Question.update(
+//         {title: title},
+//         {where: {id: id}}
+//     ).then(() => {
+//         res.render('admin/questionEdit', {user, question});
+//     })
 //
-//     Question
-//         .sync()
-//         .findOne({where: })
 //
 // });
 

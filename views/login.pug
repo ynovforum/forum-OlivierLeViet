@@ -2,10 +2,12 @@ html
     header
         title Forum | Login
         link(rel="stylesheet", href="/css/login.css")
+        link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet")
 
     body
         div(class="container")
             div(class="loginUp")
+                p Welcome back! Please login.
             div(class="loginMiddle")
                 form(method="post", action="api/login")
                     ul
@@ -15,8 +17,9 @@ html
                         li: input(type="text", name="bio", placeholder="Biographie")
                         li: button(type="submit") Connect
             div(class="loginDown")
-                    form(method="post", action="api/signin")
-                        ul
-                            li: input(type="text", name="username", placeholder="Username")
-                            li: input(type="text", name="password", placeholder="Password")
-                            li: button(type="submit") log ingz
+                form(method="post", action="api/signin")
+                    ul
+                        li: input(type="text", name="username", placeholder="Username")
+                        li: input(type="text", name="password", placeholder="Password")
+                        li: button(type="submit") log ingz
+

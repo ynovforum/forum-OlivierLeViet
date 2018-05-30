@@ -3,7 +3,7 @@ $grey: #F9FAFC;
 $white: #FFFFFF;
 $green: #35B045;
 $headline2: 'Source Sans Pro', sans-serif;
-$font-stack: Helvetica, sans-serif;
+
 
 body {
   background-color: $main;
@@ -59,6 +59,7 @@ body {
 .signin input {
   width: 340px;
   padding: 10px;
+  margin-top: 5px;
   border-style: solid;
   background-color: $main;
   border-width: 1px;
@@ -110,4 +111,17 @@ img {
   width: 60px;
   height: 60px;
   margin-left: 5%;
+}
+
+@import "little";
+#already {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+}
+
+#pass {
+  position: absolute;
+  right: 0;
+  bottom: -40px;
 }

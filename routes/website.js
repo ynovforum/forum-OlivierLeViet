@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     Question.sync().then(function () {
         if(user) {
             if (user.role === 'Admin') {
-                res.redirect("admin");
+                res.redirect('admin');
             } else {
                 Question.findAll().then((questions) => {res.render('home', {user: req.user, questions});})
             }
@@ -21,7 +21,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    res.render("login");
+    res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+    res.render('signup');
 });
 
 router.post('/api/signin', passport.authenticate('local', {

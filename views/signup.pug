@@ -9,13 +9,14 @@ html
             div(class="loginUp")
                 p Welcome back! Please login.
             div(class="loginMiddle")
-                form(method="post", class="signin", action="api/signin")
+                form(method="post", class="signin" action="api/login")
                     ul
-                        li: p(class="hello") Sign in with your e-mail address
+                        li: p(class="hello") Sign up by filling the form
                         li: input(type="text", name="username", placeholder="Username")
-                        li: p(class="hello") Password
+                        li: input(type="text", name="email", placeholder="Email")
                         li: input(type="text", name="password", placeholder="Password")
-                        li: button(type="submit", id="btnSignin") Sign in to Dashboard
+                        li: input(type="text", name="bio", placeholder="Biographie")
+                        li: button(type="submit") Sign up
 
             div(class="loginDown")
                 div(class="pp")
@@ -25,5 +26,5 @@ html
                 a(href=""): img(src="/assets/image/facebook-icon.png")
                 a(href=""): img(src="/assets/image/pinterest-icon.png")
                 a(href=""): img(src="/assets/image/dribble-icon.png")
-                a(href="signup", class="little", id="already") Don't have an account yet? Get Started
-                a(href="", class="little", id="pass") Forgot Password?
+                a(href="login", class="little", id="already") Already have an account? Signin
+

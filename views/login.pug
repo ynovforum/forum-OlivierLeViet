@@ -9,17 +9,27 @@ html
             div(class="loginUp")
                 p Welcome back! Please login.
             div(class="loginMiddle")
-                form(method="post", action="api/login")
+                form(method="post", class="signin", action="api/signin")
                     ul
+                        li: p Sign in with your e-mail address
                         li: input(type="text", name="username", placeholder="Username")
-                        li: input(type="text", name="email", placeholder="Email")
+                        li: p Password
                         li: input(type="text", name="password", placeholder="Password")
-                        li: input(type="text", name="bio", placeholder="Biographie")
-                        li: button(type="submit") Connect
-            div(class="loginDown")
-                form(method="post", action="api/signin")
-                    ul
-                        li: input(type="text", name="username", placeholder="Username")
-                        li: input(type="text", name="password", placeholder="Password")
-                        li: button(type="submit") log ingz
+                        li: button(type="submit", id="btnSignin") Sign in to Dashboard
 
+            div(class="loginDown")
+                div(class="pp")
+                    p Login via social networks
+                div(class)
+                a(href=""): img(src="/assets/image/twitter-icon.png")
+                a(href=""): img(src="/assets/image/facebook-icon.png")
+                a(href=""): img(src="/assets/image/pinterest-icon.png")
+                a(href=""): img(src="/assets/image/dribble-icon.png")
+
+                //form(method="post", action="api/login")
+                //    ul
+                //        li: input(type="text", name="username", placeholder="Username")
+                //        li: input(type="text", name="email", placeholder="Email")
+                //        li: input(type="text", name="password", placeholder="Password")
+                //        li: input(type="text", name="bio", placeholder="Biographie")
+                //        li: button(type="submit") Connect

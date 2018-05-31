@@ -26,7 +26,7 @@ body {
   top: 3.5%;
 }
 
-.dropdownT button {
+.dorpbtn {
   background-color: transparent;
   border-style: solid;
   border-width: 1px;
@@ -36,4 +36,15 @@ body {
   width: 115px;
 }
 
+.dorpbtn:hover {
+  background-color: red;
+}
+
+
+.dorpbtn:hover .dropdown-content{
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+}
 

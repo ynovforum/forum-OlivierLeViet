@@ -1,21 +1,83 @@
+@import "common";
+
 .nav {
-    position: relative;
-    width: 100%;
-    height: 80px;
-    background-color: blue;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  margin-top: -20px;
+
 }
 
-ul {
-    list-style-type: none;
-    padding: 2px;
+a {
+  text-decoration: none;
 }
 
-li {
-    display: inline-block;
-    margin-left: 5px;
+#plane {
+  position: absolute;
+  left: 18px;
+  top: 18%;
 }
 
-h1 {
-    position: relative;
-    text-align: center;
+img {
+  width: 50px;
+  height: 50px;
+}
+
+#drop {
+  position: absolute;
+  left: 88px;
+  top: 36%;
+}
+
+#newP {
+  position: absolute;
+  top: 36%;
+  left: 184px;
+}
+
+#profile {
+  position: absolute;
+  top: 36%;
+  left: 265px;
+}
+
+#search {
+  position: absolute;
+  top: 30%;
+  right: 100px;
+  padding: 5.3px;
+  width: 260px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #F9FAFC;
+  border-radius: 2px;
+}
+
+#btnloop {
+  position: absolute;
+  background-color: transparent;
+  border-style: none;
+  top: 30%;
+  width: 30px;
+  height: 28px;
+  right: 104px;
+}
+
+#loop {
+  width: 100%;
+  height: 100%;
+}
+
+#caret {
+  width: 10px;
+  height: 10px;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }

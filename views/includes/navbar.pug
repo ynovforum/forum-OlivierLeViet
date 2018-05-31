@@ -1,9 +1,22 @@
-link(rel="stylesheet", href="/scss/navbar.scss")
+link(rel="stylesheet", href="/css/navbar.css")
+script(src='/js/tacos.js')
 
 div(class="nav")
-    ul(class="navUl")
-        li: a(href="/") Home
-        li: a(href="login") Login
-        if user
-            li: a(href="logout") Logout
-    h1 Overview
+    a(href="/", id="plane"): img(src="/assets/image/plane-icon.png")
+    div(class="dropdown", id="drop")
+        button(class="dorpbtn", onclick="myFunction()") Home &nbsp
+            img(id="caret", src="/assets/image/caret-icon.png")
+        div(class="dropdown-content", id="myDropdown")
+            a(href="/") Home
+            a(href="/") Test
+    a(href="/", id="newP") New Post
+    a(href="login", id="profile") Your Profile Login
+    form(action="/")
+        input(type="text", placeholder="Search", id="search")
+        button(type="submit", id="btnloop"): img(src="/assets/image/loop-icon.png", id="loop")
+
+
+    //if user
+    //    a(href="/", id="newP) New Post
+    //if user
+    //    a(href="/", id="profile") Profile

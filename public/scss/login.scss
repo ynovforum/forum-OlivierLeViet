@@ -1,8 +1,4 @@
-$main: #EFF3F6;
-$grey: #F9FAFC;
-$white: #FFFFFF;
-$green: #35B045;
-$headline2: 'Source Sans Pro', sans-serif;
+@import 'common';
 
 
 body {
@@ -110,7 +106,7 @@ img {
   display: inline-flex;
   width: 60px;
   height: 60px;
-  margin-left: 5%;
+  margin-left: 7%;
 }
 
 @import "little";

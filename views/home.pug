@@ -2,9 +2,7 @@ html
     header
         title OliFlow
         include includes/navbar
-            link(rel="stylesheet", href="/scss/main.scss")
-
-
+            link(rel="stylesheet", href="/css/main.css")
     body
         div(class="info")
             p Bienvenue
@@ -17,5 +15,23 @@ html
                     if user.role === 'User'
                         include user/userQuestion
         div(class="container")
+            h1 Featured Events
+            div(class="dropdownT")
+                button(class="dorpbtn", onclick="myFunction()") All Types &nbsp&nbsp
+                    img(id="caret", src="/assets/image/caret-icon.png")
+                div(class="dropdown-content")
+                    a(href="/") Home
+                    a(href="/") Test
+            div(class="square")
+                img(src="/assets/image/san-fransisco.png")
+                span FEATURED
+                h3 Designing in US
+                p United States, San Francisco
+                button(type="submit") Buy for $560
+            div(class="square", id="squareR")
+                img(src="/assets/image/everest.png")
+                span FEATURED
+                h3 Photography Class
+                p United States, San Francisco
+                button(type="submit") Buy for $560
             include includes/questions
-        div(class="profile")

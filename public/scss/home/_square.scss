@@ -1,0 +1,70 @@
+@import "../common";
+#squareR {
+  right: 0;
+}
+
+.square {
+  @include abs;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 2px;
+  width: 47.9%;
+  height: 276px;
+  margin-top: -0.9%;
+  background-color: transparent;
+}
+
+.square img {
+  position: relative;
+  border-radius: 2px;
+  width: 384px;
+  height: 201px;
+  margin-left: 8px;
+  margin-top: 9px;
+}
+
+.square span {
+  @include abs;
+  color: white;
+  background-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 2px;
+  font-size: 10px;
+  line-height: 22px;
+  right: 20px;
+  top: 20px;
+  width: 70px;
+  text-align: center;
+}
+
+.square h3 {
+  position: relative;
+  margin-left: 28px;
+  margin-top: 3%;
+  @include paragraphe;
+}
+
+.square p {
+  position: relative;
+  @include footer;
+  margin-left: 28px;
+  margin-top: -20px;
+}
+
+.square button {
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+  color: white;
+  background-color: $green;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  text-align: center;
+  padding: 5px;
+  width: 110px;
+
+}

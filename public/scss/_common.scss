@@ -1,0 +1,54 @@
+$main: #EFF3F6;
+$grey: #F9FAFC;
+$white: #FFFFFF;
+$green: #31B142;
+$headline1: 'Source Sans Pro Semibold', sans-serif;
+$headline2: 'Source Sans Pro Regular', sans-serif;
+$headline3: 'Source Sans Pro Regular', sans-serif;
+
+@mixin headline1() {
+  font-family: 'Source Sans Pro Semibold', sans-serif;
+  font-size: 32px;
+  line-height: 44px;
+  color: #393c3E;
+}
+
+@mixin headline2() {
+  font-family: 'Source Sans Pro Regular', sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+  color: #393c3E;
+}
+
+@mixin headline3() {
+  font-family: 'Source Sans Pro Regular', sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: #393c3E;
+}
+
+@mixin paragraphe() {
+  font-family: 'Source Sans Pro Regular', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #71787E;
+}
+
+@mixin footer() {
+  font-family: 'Source Sans Pro Regular', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #71787E;
+}
+
+@mixin link() {
+  font-family: 'Source Sans Pro Regular', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #71787E;
+}
+
+@mixin abs() {
+  position: absolute;
+}
+

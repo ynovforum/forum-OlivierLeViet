@@ -5,16 +5,21 @@ div(class="questionForm")
     div(class="questitle")
         h1 All Questions | ?? Question
     div(class="kebab")
-        p Conference
-        p Date
-        p Price
+        p Questions &nbsp
+        p Date &nbsp&nbsp
+        p Resolved at
+        img(src="/assets/image/caret-icon.png")
 
     div(class="quesList")
         for question in questions
             div(class="question")
                 p(id="title") #{question.title}
-                p(id="desc") #{question.description}
-                p(id="userId)") #{question.userId}
                 p(id="poster") Poster par #{question.poster}
+                p(id="desc") #{question.description}
+                p(id="resolv") Date
+                button(class="btnV") Visit
+                    if user
+                        a(href="/")
+
 
 

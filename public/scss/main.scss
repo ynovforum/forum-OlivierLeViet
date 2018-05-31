@@ -1,21 +1,12 @@
 @import "common";
 @import "home/square";
+@import "home/info";
 
 body {
   background-color: $main;
   background-image: url("https://cdn.discordapp.com/attachments/450559026338594827/450560840358166529/unknown.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-
-.info {
-  @include abs;
-  border-style: solid;
-  margin-left: 0;
-  border-width: 2px;
-  border-color: $green;
-  width: 15%;
-  height: 400px;
 }
 
 .container {

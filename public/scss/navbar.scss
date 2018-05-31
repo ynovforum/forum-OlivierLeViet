@@ -74,8 +74,18 @@ img {
   height: 10px;
 }
 
+.dorpbtn {
+  background-color: transparent;
+  border-style: none;
+}
+
 .dropdown-content {
   display: none;
+}
+
+.dropdown-content a {
+  display: block;
+  color: black;
 }
 
 .dropdown:hover .dropdown-content {

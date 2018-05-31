@@ -26,6 +26,16 @@
 
 .kebab p {
   display: inline;
+  margin-left: 3.3%;
+  margin-right: 20%;
+}
+
+.kebab img {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 22%;
+  top: 20%;
 }
 
 .quesTitle h1 {
@@ -40,7 +50,8 @@
 
 .quesList {
   position: relative;
-  margin-top: 90px;
+  margin-top: 0;
+
 }
 
 /*L'article*/
@@ -49,27 +60,49 @@
   border-style: solid;
   border-width: 1px;
   border-color: black;
-  margin-bottom: 15px;
-  width: 260mm;
-  height: 150px;
+  width: 94.5%;
+  margin-left: 3.2%;
+  height: 7.5%;
 }
 
 /* LES ELEMENTS DE LARTICLE*/
 #title {
-  font-size: 20px;
-  color: black;
-}
-
-#desc {
-  font-size: 10px;
-  color: black;
+  @include headline3;
+  position: relative;
+  margin-top: 5px;
 }
 
 #poster {
-  font-size: 10px;
-  color: blue;
+  @include footer;
+  position: relative;
+  margin-top: -23px;
 }
 
-#userId {
+#desc {
+  @include paragraphe;
+  position: absolute;
+  left: 34%;
+  top: 2%;
+}
 
+#resolv {
+  @include footer;
+  position: absolute;
+  right: 33%;
+  top: 2%;
+}
+
+.btnV {
+  @include abs;
+  @include footer;
+  right: 0;
+  top: 9%;
+  color: white;
+  background-color: $green;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px;
+  width: 110px;
 }

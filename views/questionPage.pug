@@ -1,0 +1,15 @@
+html
+    header
+        title Question | #{question.title}
+        link(rel="stylesheet", href="/css/questionPage.css")
+        include includes/navbar
+
+    body
+
+        div(class="question")
+            div(class="line1")
+            div(class="line2")
+            h2 #{question.title}
+            p(id="poster") Poster par: #{question.poster}
+            div(class="carre")
+                p(id="desc") #{question.description}

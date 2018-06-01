@@ -7,13 +7,10 @@ router.post('/api/qpost', (req, res) => {
     const content = req.body.description;
     const id = req.user.id;
     console.log('dfg');
-    Question.sync().then(() => {
-        Question.create({title: title, description: content, userId: id})
-            .then(() => {
-                res.redirect('/');
-            })
-    })
-
+    Question.create({title: title, description: content, userId: id})
+        .then(() => {
+            res.redirect('/');
+        })
 });
 
 module.exports = router;

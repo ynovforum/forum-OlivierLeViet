@@ -4,18 +4,36 @@ const bcrypt = require('bcrypt');
 const {User, Comment, Question} = require('../models');
 //##########ROUTING############
 
+//################Question page no comments##################
+router.get('/questionPage/:questionId', (req, res) => {
+        Question
+            .findById(req.params.questionId)
+            .then((question) => {
+                res.render('questionPage', {question});
+            })
+    }
+);
+
+router.post('/questionPage/:questionId', (req, res) => {
+    res.redirect(`/questionPage/${req.params.questionId}`);
+});
+
 
 router.get('/', (req, res) => {
     const user = req.user;
     Question.sync().then(function () {
-        if(user) {
+        if (user) {
             if (user.role === 'Admin') {
                 res.redirect('admin');
             } else {
-                Question.findAll().then((questions) => {res.render('home', {user: req.user, questions});})
+                Question.findAll().then((questions) => {
+                    res.render('home', {user: req.user, questions});
+                })
             }
         } else {
-            Question.findAll().then((questions) => {res.render('home', {user: req.user, questions});})
+            Question.findAll().then((questions) => {
+                res.render('home', {user: req.user, questions});
+            })
         }
     })
 });

@@ -17,7 +17,8 @@ html
         div(class="questionUpdate", id="questionUpdate", style="display: none;")
             form(method="post", action="/admin/api/update") Updater votre Article #{user.name}
                 ul
-                    li: input(type="text", name="title", placeholder=question.title)
-                    li: input(type="text", name="description", placeholder=question.description)
+                    li: input(type="text", name="titlez", placeholder=question.title)
+                    li: input(type="text", name="descriptionz", placeholder=question.description)
+                    li: input(type="hidden", name="id", value=question.id)
                     li: button(type="submit") Updater l'article
             button(onclick="edit()") Back

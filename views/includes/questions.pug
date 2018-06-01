@@ -17,9 +17,5 @@ div(class="questionForm")
                 p(id="poster") Poster par #{question.poster}
                 p(id="desc") #{question.description}
                 p(id="resolv") Date
-                button(class="btnV") Visit
-                    if user
-                        a(href="/")
-
-
-
+                form(type="post", action="/questionPage/" + question.id)
+                    button(type="submit", class="btnV") Visit

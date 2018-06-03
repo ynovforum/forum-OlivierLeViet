@@ -21,12 +21,15 @@ html
 
         if comments
             div(class="comments")
+                h2 Comments
                 for comment in comments
-                    div(class="comment")
-                    h3(id="posterC") Poster par: #{comment.userName}
-                    div(class="carre")
-                        p(id="content") #{comment.content}
-                    div(class="line3")
+                    if comment.questionId === question.id
+                        div(class="comment")
+                            h3(id="posterC") Poster par: #{comment.userName}
+                            div(class="carre")
+                                p(id="content") #{comment.content}
+                            div(class="line3")
+
 
 
 

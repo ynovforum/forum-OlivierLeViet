@@ -13,3 +13,20 @@ html
             p(id="poster") Poster par: #{question.poster}
             div(class="carre")
                 p(id="desc") #{question.description}
+            form(action="/", id="home")
+                button(type="submit") Home
+            form(method="post", action="/comment/" + question.id, id="comment")
+                button(type="submit") Comment
+
+
+        if comments
+            div(class="comments")
+                for comment in comments
+                    div(class="comment")
+                    h3(id="posterC") Poster par: #{comment.userName}
+                    div(class="carre")
+                        p(id="content") #{comment.content}
+                    div(class="line3")
+
+
+

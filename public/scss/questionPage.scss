@@ -11,7 +11,7 @@ body {
   margin-top: 10%;
   width: 60%;
   height: auto;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 
   border-style: solid;
   border-width: 1px;
@@ -33,7 +33,7 @@ body {
   background-color: grey;
   width: 100%;
   height: 2px;
-  bottom: 50px;
+  bottom: 70px;
 }
 
 h2 {
@@ -56,6 +56,56 @@ h2 {
 
 }
 
-#desc {
+#home {
+  position: absolute;
+  left: 50px;
+  bottom: 15px;
+}
+
+//comment
+.comments {
+  position: relative;
+  background-color: white;
+  margin: auto;
+  margin-top:5%;
+  width: 60%;
+  height: auto;
+  padding-bottom: 80px;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 5px;
+}
+
+#comment {
+  position: absolute;
+  right: 50px;
+  bottom: -5px;
+}
+
+#comment ul {
+  list-style-type: none;
+}
+
+.comment {
+
+}
+
+#posterC {
+  @include headline3;
+}
+
+#content{
+  position: relative;
+  margin-top: -10px;
+}
+
+.line3 {
+  position: relative;
+  background-color: grey;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 0;
 
 }

@@ -11,7 +11,7 @@ div(class="questionForm")
         img(src="/assets/image/caret-icon.png")
 
     div(class="quesList")
-        for question in questions
+        for question in questionID
             div(class="question")
                 h1(id="title") #{question.title}
                 p(id="poster") Poster par #{question.poster}
@@ -20,3 +20,16 @@ div(class="questionForm")
                 form(type="post", action="/questionPage/" + question.id)
                     button(type="submit", class="btnV") Visit
             div(class="line")
+    div(class="quesList")
+        for question in questionNoID
+            div(class="question")
+                h1(id="title") #{question.title}
+                p(id="poster") Poster par #{question.poster}
+                div(class="descdesc") #{question.createdAt}
+                p(id="resolv") Date
+                form(type="post", action="/questionPage/" + question.id)
+                    button(type="submit", class="btnV") Visit
+            div(class="line")
+
+
+

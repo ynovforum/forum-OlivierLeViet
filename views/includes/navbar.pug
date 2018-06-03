@@ -9,14 +9,11 @@ div(class="nav")
         div(class="dropdown-content", id="myDropdown")
             a(href="/") Home
             a(href="/") Test
-    a(href="/", id="newP") New Post
-    a(href="login", id="profile") Your Profile Login
+    if user
+        a(href="newPost", id="newP") New Post
+        a(href="logout", id="profile") Logout
+    else
+        a(href="login", id="newP") Login
     form(action="/")
         input(type="text", placeholder="Search", id="search")
         button(type="submit", id="btnloop"): img(src="/assets/image/loop-icon.png", id="loop")
-
-
-    //if user
-    //    a(href="/", id="newP) New Post
-    //if user
-    //    a(href="/", id="profile") Profile

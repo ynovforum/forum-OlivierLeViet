@@ -2,6 +2,28 @@ const router = require('express').Router();
 const Sequelize = require('sequelize');
 const {User, Comment, Question} = require('../models');
 
+router.post('/api/comment', (req, res) => {
+    const user = req.user;
+    const userId = user.id;
+    const qId = req.body.id;
+    const userN = user.name;
+    const content = req.body.content;
+    Comment
+        .create({content: content, questionId: qId, userId: userId, userName: userN})
+        .then(() => {
+            Question
+                .findAll({where: {userId: userId}})
+                .then((questionID) => {
+                    Question.findAll({
+                        where: {userId: {[Sequelize.Op.not]: userId}}
+                    }).then((questionNoID) => {
+                        res.render('admin', {user, questionID, questionNoID});
+                    });
+                })
+        })
+});
+
+
 router.get('/', (req, res) => {
     const id = req.user.id;
     const user = req.user;
@@ -62,6 +84,11 @@ router.post('/api/update', (req, res) => {
                     res.render('admin/questionEdit', {user, question});
                 })
         })
+});
+
+router.get('/logout', (req, res) => {
+    req.logout();
+    res.redirect('/');
 });
 
 module.exports = router;

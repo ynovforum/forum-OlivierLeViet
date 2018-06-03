@@ -2,11 +2,11 @@ const Sequelize = require('sequelize');
 
 function defineComment(db) {
     const Comment = db.define('comments', {
-        question_id: {
-            type: Sequelize.INTEGER
-        },
         content: {
             type: Sequelize.TEXT
+        },
+        userName: {
+            type: Sequelize.STRING
         }
     });
 

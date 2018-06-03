@@ -11,9 +11,7 @@ body {
 
 .container {
   position: relative;
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
+  @include border(transparent);
   margin-left: 443px;
   margin-top: 0;
   width: 835px;
@@ -26,18 +24,11 @@ body {
   top: 3.5%;
 }
 
-.dorpbtn {
+.dorpbtnT {
   background-color: transparent;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #F9FAFC;
-  border-radius: 2px;
+  @include border(#F9FAFC);
   padding: 5px;
   width: 115px;
-}
-
-.dorpbtn:hover {
-  background-color: red;
 }
 
 

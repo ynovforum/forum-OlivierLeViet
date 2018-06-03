@@ -12,7 +12,7 @@
   width: 47.9%;
   height: 276px;
   margin-top: -0.9%;
-  background-color: transparent;
+  background-color: white;
 }
 
 .square img {
@@ -29,9 +29,7 @@
   color: white;
   background-color: black;
   border-style: solid;
-  border-width: 1px;
-  border-color: black;
-  border-radius: 2px;
+  @include border(black);
   font-size: 10px;
   line-height: 22px;
   right: 20px;
@@ -60,9 +58,7 @@
   bottom: 20px;
   color: white;
   background-color: $green;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 2px;
+  @include border($green);
   text-align: center;
   padding: 5px;
   width: 110px;

@@ -2,6 +2,7 @@ $main: #EFF3F6;
 $grey: #F9FAFC;
 $white: #FFFFFF;
 $green: #31B142;
+$blue: #269AF4;
 $headline1: 'Source Sans Pro Semibold', sans-serif;
 $headline2: 'Source Sans Pro Regular', sans-serif;
 $headline3: 'Source Sans Pro Regular', sans-serif;
@@ -52,3 +53,9 @@ $headline3: 'Source Sans Pro Regular', sans-serif;
   position: absolute;
 }
 
+@mixin border($color) {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: ($color);
+}

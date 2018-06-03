@@ -1,31 +1,69 @@
-link(rel="stylesheet", href="/scss/admin/questionsAdmin.css")
-
-div(class="questionsAdmin")
-    for question in questionID
-        div(class="questionD")
-            form(method="post", action="/admin/api/edit")
-                ul
-                    li: input(name="title", value=question.title, style="display: none;")
-                    li: p #{question.title}
-                    li: input(name="description", value=question.description, style="display: none;")
-                    li: p #{question.description}
-                    li: input(name="userId", value=question.userId, style="display: none;")
-                    li: p #{question.userId}
-                    li: input(name="poster", value=question.poster, style="display: none;")
-                    li: p #{question.poster}
-                    li: input(name="id", value=question.id, style="display: none;")
-                    li: p #{question.id}
-                    li: button(type="submit") edit
-            //p #{question.title}
-            //p #{question.description}
-            //p #{question.userId}
-            //
-            //    ul: li: input(name="title", style="display: none;")
-            //        li: button(type="submit") edit
+link(rel="stylesheet", href="/css/questions.css")
 
 
+div(class="questionForm")
+    div(class="questitle")
+        h1 All Questions | ?? Question
+    div(class="kebab")
+        p Questions &nbsp
+        p Date &nbsp&nbsp
+        p Resolved at
+        img(src="/assets/image/caret-icon.png")
+
+    div(class="quesList")
+        for question in questionID
+            div(class="question")
+                h1(id="title") #{question.title}
+                p(id="poster") Poster par #{question.poster}
+                div(class="descdesc") #{question.createdAt}
+                p(id="resolv") Date
+                form(type="post", action="/questionPage/" + question.id)
+                    button(type="submit", class="btnV") Visit
+            div(class="line")
+    div(class="quesList")
+        for question in questionNoID
+            div(class="question")
+                h1(id="title") #{question.title}
+                p(id="poster") Poster par #{question.poster}
+                div(class="descdesc") #{question.createdAt}
+                p(id="resolv") Date
+                form(type="post", action="/questionPage/" + question.id)
+                    button(type="submit", class="btnV") Visit
+            div(class="line")
 
 
-    // for questionz in questionNoID
-    //     p #{questionz.userId}
-    //
+
+
+
+
+
+//link(rel="stylesheet", href="/scss/admin/questionsAdmin.css")
+//
+//div(class="questionsAdmin")
+//    for question in questionID
+//        div(class="questionD")
+//            form(method="post", action="/admin/api/edit")
+//                ul
+//                    li: input(name="title", value=question.title, style="display: none;")
+//                    li: p #{question.title}
+//                    li: input(name="description", value=question.description, style="display: none;")
+//                    li: p #{question.description}
+//                    li: input(name="userId", value=question.userId, style="display: none;")
+//                    li: p #{question.userId}
+//                    li: input(name="poster", value=question.poster, style="display: none;")
+//                    li: p #{question.poster}
+//                    li: input(name="id", value=question.id, style="display: none;")
+//                    li: p #{question.id}
+//                    li: button(type="submit") edit
+//            p #{question.title}
+//            p #{question.description}
+//            p #{question.userId}
+//
+//                ul: li: input(name="title", style="display: none;")
+//                    li: button(type="submit") edit
+//
+//
+//
+//
+//     for questionz in questionNoID
+//         p #{questionz.userId}

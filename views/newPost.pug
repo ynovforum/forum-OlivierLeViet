@@ -1,0 +1,32 @@
+html
+    header
+        title OliFlow | New
+        include includes/navbar
+        link(rel="stylesheet", href="/css/login.css")
+
+    body
+        if user
+            if user.role === 'Admin'
+                div(class="container")
+                    div(class="loginUp")
+                        p Créez votre Article #{user.name}
+                    div(class="loginMiddle")
+                        form(method="post", class="signin", action="/admin/api/qpost")
+                            ul
+                                li: p(class="hello") Titre
+                                li: input(type="text", name="title", placeholder="Titre")
+                                li: p(class="hello") Description
+                                li: input(type="text", name="description", placeholder="Description")
+                                li: button(type="submit", id="btnSignin") Poster
+            if user.role === 'User'
+                div(class="container")
+                    div(class="loginUp")
+                        p Créez votre Article #{user.name}
+                    div(class="loginMiddle")
+                        form(method="post", class="signin", action="/user/api/qpost")
+                            ul
+                                li: p(class="hello") Titre
+                                li: input(type="text", name="title", placeholder="Titre")
+                                li: p(class="hello") Description
+                                li: input(type="text", name="description", placeholder="Description")
+                                li: button(type="submit", id="btnSignin") Poster

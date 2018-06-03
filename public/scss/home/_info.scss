@@ -2,14 +2,11 @@
 
 .info {
   @include abs;
-  border-style: solid;
   left: 14%;
-  border-width: 2px;
-  border-color: $green;
   width: 15%;
   height: 80%;
 }
 
-h2 {
+p {
   @include headline3;
 }

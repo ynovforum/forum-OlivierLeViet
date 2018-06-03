@@ -1,0 +1,30 @@
+html
+    header
+        title OliFlow | New
+        include includes/navbar
+        link(rel="stylesheet", href="/css/login.css")
+
+    body
+        if user
+            if user.role === 'Admin'
+                div(class="container")
+                    div(class="loginUp")
+                        p Créez votre Comment #{user.name}
+                    div(class="loginMiddle")
+                        form(method="post", class="signin", action="/admin/api/comment")
+                            ul
+                                li: p(class="hello") Content
+                                li: input(type="text", name="content", placeholder="Content")
+                                li: input(type="hidden", name="id", value=question.id)
+                                li: button(type="submit", id="btnSignin") Commenter
+            if user.role === 'User'
+                div(class="container")
+                    div(class="loginUp")
+                        p Créez votre Comment #{user.name}
+                    div(class="loginMiddle")
+                        form(method="post", class="signin", action="/user/api/comment")
+                            ul
+                                li: p(class="hello") Content
+                                    li: input(type="text", name="content", placeholder="Content")
+                                    li: input(type="hidden", name="id", value=question.id)
+                                    li: button(type="submit", id="btnSignin") Commenter

@@ -2,22 +2,15 @@ html
     header
         title OliFlow
         include includes/navbar
-            link(rel="stylesheet", href="/css/main.css")
+        link(rel="stylesheet", href="/css/main.css")
     body
         div(class="info")
-            h2 Menu
-                if user
-                    p #{user.name}
-                    p #{user.id}
-                    a(href="logout") logout
-                    if user.role === 'Admin'
-                        include admin/newQuestion
-                    if user.role === 'User'
-                        include user/userQuestion
+            if user
+                p Bienvenue #{user.name}
         div(class="container")
             h1 Featured Events
             div(class="dropdownT")
-                button(class="dorpbtn", onclick="myFunction()") All Types &nbsp&nbsp
+                button(class="dorpbtnT", onclick="myFunction()") All Types &nbsp&nbsp
                     img(id="caret", src="/assets/image/caret-icon.png")
                 div(class="dropdown-content")
                     a(href="/") Home
